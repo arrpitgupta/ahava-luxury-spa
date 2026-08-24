@@ -172,7 +172,7 @@ export default function Navbar() {
       {/* Full-Screen Animated Mobile Menu Overlay */}
       <div
         ref={mobileMenuRef}
-        className="fixed inset-0 bg-[#151412]/98 backdrop-blur-2xl z-50 flex flex-col justify-between p-8 invisible opacity-0 lg:hidden overflow-y-auto"
+        className="fixed inset-0 bg-[#151412] z-[100] flex flex-col justify-between p-6 sm:p-8 invisible opacity-0 lg:hidden overflow-y-auto min-h-screen"
       >
         <div className="flex items-center justify-between border-b border-[#C6A66B]/20 pb-6">
           <Link to="/" onClick={() => setMobileMenuOpen(false)} className="flex flex-col">
