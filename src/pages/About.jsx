@@ -48,7 +48,7 @@ export default function About() {
 
   return (
     <div className="bg-[#151412] text-[#F7F3EC]">
-      
+
       {/* Page Hero Header */}
       <PageHero
         eyebrow="THE AHAVA EXPERIENCE"
@@ -62,7 +62,7 @@ export default function About() {
       {/* Alternating Story Sections */}
       <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-28">
-          
+
           {/* Story Block 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-6 space-y-6">
@@ -85,7 +85,7 @@ export default function About() {
             <div className="lg:col-span-6">
               <div className="aspect-[4/3] rounded-sm overflow-hidden border border-[#C6A66B]/30 shadow-luxury">
                 <img
-                  src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=1200&q=80"
+                  src="https://res.cloudinary.com/e6ehhcen/image/upload/v1787575750/WhatsApp_Image_2026-08-24_at_1.37.54_PM.jpg"
                   alt="The Art of Slowing Down at Ahava Luxury Spa"
                   className="w-full h-full object-cover"
                 />
@@ -115,7 +115,7 @@ export default function About() {
             <div className="lg:col-span-6 lg:order-1">
               <div className="aspect-[4/3] rounded-sm overflow-hidden border border-[#C6A66B]/30 shadow-luxury">
                 <img
-                  src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1200&q=80"
+                  src="https://res.cloudinary.com/e6ehhcen/image/upload/v1787575394/WhatsApp_Image_2026-08-24_at_1.37.52_PM.jpg"
                   alt="Sanctuary Architecture at Ahava"
                   className="w-full h-full object-cover"
                 />
@@ -129,7 +129,7 @@ export default function About() {
       {/* Feature Grid: Why Ahava (6 Features) */}
       <section className="py-24 bg-[#211E1A] border-t border-b border-[#C6A66B]/15">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <span className="text-[#C6A66B] text-xs font-sans tracking-[0.3em] uppercase font-medium">
               EXCELLENCE IN EVERY DETAIL
