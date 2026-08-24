@@ -27,28 +27,28 @@ export default function Testimonials() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 lg:py-36 bg-[#211E1A] text-[#F7F3EC] relative overflow-hidden border-t border-b border-[#C6A66B]/15"
+      className="py-24 lg:py-36 bg-[#FAF6F0] text-[#2C2621] relative overflow-hidden border-t border-b border-[#C6A66B]/20"
     >
       <div className="max-w-5xl mx-auto px-6 sm:px-8 text-center">
         
         {/* Eyebrow Label */}
         <div className="inline-flex items-center gap-3 mb-4">
           <span className="w-8 h-[1px] bg-[#C6A66B]"></span>
-          <span className="text-[#C6A66B] text-xs font-sans tracking-[0.3em] uppercase font-medium">
+          <span className="text-[#C6A66B] text-xs font-sans tracking-[0.3em] uppercase font-semibold">
             GUEST REVIEWS & STORIES
           </span>
           <span className="w-8 h-[1px] bg-[#C6A66B]"></span>
         </div>
 
         {/* Section Title */}
-        <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-[#F7F3EC] font-light mb-16">
+        <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-[#2C2621] font-light mb-16">
           WHAT OUR <span className="italic text-gold-gradient font-normal">GUESTS SAY</span>
         </h2>
 
         {/* Testimonial Presentation Card */}
         <div
           ref={cardRef}
-          className="relative bg-[#151412] p-8 sm:p-14 border border-[#C6A66B]/30 rounded-sm shadow-luxury transition-all duration-500"
+          className="relative bg-[#FFFDF9] p-8 sm:p-14 border border-[#C6A66B]/30 rounded-lg shadow-luxury transition-all duration-500"
         >
           {/* Quote Icon Background */}
           <div className="absolute top-6 left-6 text-[#C6A66B]/15 pointer-events-none">
@@ -63,7 +63,7 @@ export default function Testimonials() {
           </div>
 
           {/* Quote Content */}
-          <blockquote className="font-serif text-xl sm:text-2xl md:text-3xl text-[#F7F3EC] leading-relaxed font-light italic mb-8 max-w-3xl mx-auto">
+          <blockquote className="font-serif text-xl sm:text-2xl md:text-3xl text-[#2C2621] leading-relaxed font-light italic mb-8 max-w-3xl mx-auto">
             "{current.quote}"
           </blockquote>
 
@@ -72,29 +72,29 @@ export default function Testimonials() {
             <div className="font-sans text-xs tracking-ultra uppercase text-[#C6A66B] font-semibold">
               — {current.author}
             </div>
-            <div className="font-sans text-xs text-[#E8DED0]/60 font-light">
+            <div className="font-sans text-xs text-[#786C60] font-light">
               {current.title} • {current.location} • {current.treatment}
             </div>
           </div>
 
           {/* Response from Owner (if available) */}
           {current.ownerResponse && (
-            <div className="mt-6 p-4 bg-[#211E1A] border border-[#C6A66B]/20 rounded-sm text-left max-w-2xl mx-auto space-y-1">
+            <div className="mt-6 p-4 bg-[#F4EDE4] border border-[#C6A66B]/25 rounded-md text-left max-w-2xl mx-auto space-y-1">
               <div className="text-[10px] font-sans tracking-ultra uppercase text-[#C6A66B] font-semibold">
                 Response from the Owner
               </div>
-              <p className="font-sans text-xs text-[#E8DED0]/80 font-light leading-relaxed">
+              <p className="font-sans text-xs text-[#4A423A] font-light leading-relaxed">
                 "{current.ownerResponse}"
               </p>
             </div>
           )}
 
           {/* Navigation Arrows */}
-          <div className="flex items-center justify-center gap-4 mt-10 pt-6 border-t border-[#C6A66B]/15">
+          <div className="flex items-center justify-center gap-4 mt-10 pt-6 border-t border-[#C6A66B]/20">
             <button
               onClick={prevTestimonial}
               aria-label="Previous testimonial"
-              className="p-3 rounded-full border border-[#C6A66B]/30 text-[#C6A66B] hover:bg-[#C6A66B] hover:text-[#151412] transition-colors"
+              className="p-3 rounded-full border border-[#C6A66B]/30 text-[#C6A66B] hover:bg-[#C6A66B] hover:text-[#FAF6F0] transition-colors"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -116,7 +116,7 @@ export default function Testimonials() {
             <button
               onClick={nextTestimonial}
               aria-label="Next testimonial"
-              className="p-3 rounded-full border border-[#C6A66B]/30 text-[#C6A66B] hover:bg-[#C6A66B] hover:text-[#151412] transition-colors"
+              className="p-3 rounded-full border border-[#C6A66B]/30 text-[#C6A66B] hover:bg-[#C6A66B] hover:text-[#FAF6F0] transition-colors"
             >
               <ChevronRight className="w-4 h-4" />
             </button>

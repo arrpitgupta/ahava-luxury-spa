@@ -24,7 +24,7 @@ export default function Services() {
     : services.filter(s => s.categorySlug === activeCategory);
 
   return (
-    <div className="bg-[#151412] text-[#F7F3EC] min-h-screen">
+    <div className="bg-[#FAF6F0] text-[#2C2621] min-h-screen">
       
       {/* Page Hero */}
       <PageHero
@@ -48,8 +48,8 @@ export default function Services() {
                 onClick={() => handleCategoryChange(cat.slug)}
                 className={`px-5 py-2.5 text-xs font-sans tracking-widest uppercase transition-all duration-300 whitespace-nowrap rounded-full ${
                   activeCategory === cat.slug
-                    ? 'bg-[#C6A66B] text-[#151412] font-semibold shadow-gold-glow'
-                    : 'bg-[#211E1A] text-[#E8DED0]/80 hover:text-[#F7F3EC] hover:bg-[#C6A66B]/20 border border-[#C6A66B]/20'
+                    ? 'bg-[#C6A66B] text-[#FAF6F0] font-semibold shadow-gold-glow'
+                    : 'bg-[#FFFDF9] text-[#4A423A] hover:text-[#2C2621] hover:bg-[#C6A66B]/20 border border-[#C6A66B]/30'
                 }`}
               >
                 {cat.name}

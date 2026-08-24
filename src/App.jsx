@@ -21,7 +21,7 @@ export default function App() {
     <Router>
       <ScrollToTop />
       <Analytics />
-      <div className="min-h-screen bg-[#151412] text-[#F7F3EC] font-sans relative selection:bg-[#C6A66B] selection:text-[#151412]">
+      <div className="min-h-screen bg-[#FAF6F0] text-[#2C2621] font-sans relative selection:bg-[#C6A66B] selection:text-[#FAF6F0]">
         
         {/* Custom Desktop Cursor */}
         <CustomCursor />

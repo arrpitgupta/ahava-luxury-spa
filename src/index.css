@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --color-dark: #151412;
-    --color-surface: #211E1A;
-    --color-ivory: #F7F3EC;
-    --color-beige: #E8DED0;
+    --color-dark: #FAF6F0;
+    --color-surface: #FFFDF9;
+    --color-ivory: #2C2621;
+    --color-beige: #4A423A;
     --color-gold: #C6A66B;
-    --color-brown: #6D5A48;
+    --color-brown: #8C7561;
   }
 
   html {
     scroll-behavior: smooth;
-    background-color: #151412;
-    color: #F7F3EC;
+    background-color: #FAF6F0;
+    color: #2C2621;
     font-family: 'Inter', sans-serif;
   }
 
   body {
-    background-color: #151412;
-    color: #F7F3EC;
+    background-color: #FAF6F0;
+    color: #2C2621;
     overflow-x: hidden;
   }
 
@@ -37,39 +37,39 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #151412;
+  background: #FAF6F0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #6D5A48;
+  background: #C6A66B;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C6A66B;
+  background: #9E763B;
 }
 
-/* Custom Utilities for Luxury Aesthetic */
+/* Custom Utilities for Warm Luxury Aesthetic */
 .font-serif-luxury {
   font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
 .text-gold-gradient {
-  background: linear-gradient(135deg, #F7F3EC 0%, #C6A66B 50%, #E8DED0 100%);
+  background: linear-gradient(135deg, #2C2621 0%, #B58A4B 50%, #785A2D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .border-gold-subtle {
-  border-color: rgba(198, 166, 107, 0.2);
+  border-color: rgba(198, 166, 107, 0.3);
 }
 
 .bg-radial-luxury {
-  background: radial-gradient(circle at 50% 30%, rgba(33, 30, 26, 0.8) 0%, rgba(21, 20, 18, 1) 70%);
+  background: radial-gradient(circle at 50% 30%, rgba(255, 253, 249, 0.9) 0%, rgba(250, 246, 240, 1) 70%);
 }
 
 .glass-luxury {
-  background: rgba(21, 20, 18, 0.75);
+  background: rgba(250, 246, 240, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
@@ -79,8 +79,8 @@
 }
 
 .gold-glow-hover:hover {
-  box-shadow: 0 0 30px rgba(198, 166, 107, 0.15);
-  border-color: rgba(198, 166, 107, 0.4);
+  box-shadow: 0 0 30px rgba(198, 166, 107, 0.2);
+  border-color: rgba(198, 166, 107, 0.5);
 }
 
 /* Custom cursor default pointer behavior */

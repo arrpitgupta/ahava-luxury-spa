@@ -47,7 +47,7 @@ export default function About() {
   ];
 
   return (
-    <div className="bg-[#151412] text-[#F7F3EC]">
+    <div className="bg-[#FAF6F0] text-[#2C2621]">
 
       {/* Page Hero Header */}
       <PageHero
@@ -66,13 +66,13 @@ export default function About() {
           {/* Story Block 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-[#C6A66B] text-xs font-sans tracking-[0.3em] uppercase">
+              <span className="text-[#C6A66B] text-xs font-sans tracking-[0.3em] uppercase font-semibold">
                 OUR PHILOSOPHY
               </span>
-              <h2 className="font-serif text-3xl sm:text-5xl uppercase tracking-tight font-light">
+              <h2 className="font-serif text-3xl sm:text-5xl uppercase tracking-tight font-light text-[#2C2621]">
                 THE ART OF <span className="italic text-gold-gradient font-normal">SLOWING DOWN</span>
               </h2>
-              <div className="space-y-4 font-sans text-sm sm:text-base text-[#E8DED0]/85 font-light leading-relaxed">
+              <div className="space-y-4 font-sans text-sm sm:text-base text-[#4A423A] font-light leading-relaxed">
                 <p>
                   At Ahava, wellness begins with creating space to breathe. In a world defined by constant acceleration and digital noise, we believe true luxury is quiet time devoted entirely to self-restoration.
                 </p>
@@ -96,13 +96,13 @@ export default function About() {
           {/* Story Block 2 (Reversed) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-6 lg:order-2 space-y-6">
-              <span className="text-[#C6A66B] text-xs font-sans tracking-[0.3em] uppercase">
+              <span className="text-[#C6A66B] text-xs font-sans tracking-[0.3em] uppercase font-semibold">
                 MINDFUL ENVIRONMENT
               </span>
-              <h2 className="font-serif text-3xl sm:text-5xl uppercase tracking-tight font-light">
+              <h2 className="font-serif text-3xl sm:text-5xl uppercase tracking-tight font-light text-[#2C2621]">
                 SANCTUARY BY <span className="italic text-gold-gradient font-normal">DESIGN</span>
               </h2>
-              <div className="space-y-4 font-sans text-sm sm:text-base text-[#E8DED0]/85 font-light leading-relaxed">
+              <div className="space-y-4 font-sans text-sm sm:text-base text-[#4A423A] font-light leading-relaxed">
                 <p>
                   From hand-carved stone basins and warm teak architectural accents to custom acoustic soundproofing and ambient candle illumination, Ahava is built as a physical refuge.
                 </p>
@@ -127,14 +127,14 @@ export default function About() {
       </section>
 
       {/* Feature Grid: Why Ahava (6 Features) */}
-      <section className="py-24 bg-[#211E1A] border-t border-b border-[#C6A66B]/15">
+      <section className="py-24 bg-[#F4EDE4] text-[#2C2621] border-t border-b border-[#C6A66B]/20">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
 
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="text-[#C6A66B] text-xs font-sans tracking-[0.3em] uppercase font-medium">
+            <span className="text-[#C6A66B] text-xs font-sans tracking-[0.3em] uppercase font-semibold">
               EXCELLENCE IN EVERY DETAIL
             </span>
-            <h2 className="font-serif text-4xl sm:text-5xl uppercase tracking-tight font-light">
+            <h2 className="font-serif text-4xl sm:text-5xl uppercase tracking-tight text-[#2C2621] font-light">
               THE AHAVA <span className="italic text-gold-gradient font-normal">STANDARDS</span>
             </h2>
           </div>
@@ -145,15 +145,15 @@ export default function About() {
               return (
                 <div
                   key={i}
-                  className="p-8 bg-[#151412] border border-[#C6A66B]/20 rounded-sm hover:border-[#C6A66B]/60 transition-all duration-500 gold-glow-hover"
+                  className="p-8 bg-[#FFFDF9] border border-[#C6A66B]/30 rounded-lg hover:border-[#C6A66B] transition-all duration-500 gold-glow-hover shadow-luxury"
                 >
-                  <div className="p-3 w-12 h-12 bg-[#211E1A] border border-[#C6A66B]/30 rounded-full text-[#C6A66B] mb-6 flex items-center justify-center">
+                  <div className="p-3 w-12 h-12 bg-[#FAF6F0] border border-[#C6A66B]/30 rounded-full text-[#C6A66B] mb-6 flex items-center justify-center">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="font-serif text-xl uppercase tracking-wide text-[#F7F3EC] mb-3">
+                  <h3 className="font-serif text-xl uppercase tracking-wide text-[#2C2621] mb-3 font-normal">
                     {feat.title}
                   </h3>
-                  <p className="font-sans text-xs text-[#E8DED0]/75 font-light leading-relaxed">
+                  <p className="font-sans text-xs text-[#4A423A] font-light leading-relaxed">
                     {feat.desc}
                   </p>
                 </div>
@@ -165,19 +165,19 @@ export default function About() {
       </section>
 
       {/* WhatsApp Action Callout */}
-      <section className="py-24 text-center">
+      <section className="py-24 bg-[#FAF6F0] text-[#2C2621] text-center">
         <div className="max-w-3xl mx-auto px-6 space-y-6">
-          <h3 className="font-serif text-3xl sm:text-5xl uppercase font-light">
+          <h3 className="font-serif text-3xl sm:text-5xl uppercase font-light text-[#2C2621]">
             READY TO EXPERIENCE <span className="italic text-gold-gradient font-normal">AHAVA?</span>
           </h3>
-          <p className="font-sans text-sm text-[#E8DED0]/80 font-light">
+          <p className="font-sans text-sm text-[#4A423A] font-light">
             Contact our spa concierge on WhatsApp to arrange your custom wellness itinerary.
           </p>
           <button
             onClick={handleWhatsAppClick}
-            className="px-9 py-4 bg-[#25D366] text-[#151412] text-xs font-sans uppercase tracking-ultra font-semibold hover:bg-[#20ba5a] transition-all inline-flex items-center gap-3 shadow-luxury"
+            className="px-9 py-4 bg-[#25D366] text-[#FAF6F0] text-xs font-sans uppercase tracking-ultra font-semibold hover:bg-[#20ba5a] transition-all inline-flex items-center gap-3 shadow-luxury rounded-sm"
           >
-            <MessageCircle className="w-4 h-4 fill-[#151412]" />
+            <MessageCircle className="w-4 h-4 fill-current" />
             <span>BOOK ON WHATSAPP</span>
           </button>
         </div>

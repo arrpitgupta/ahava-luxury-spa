@@ -24,7 +24,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#151412] text-[#F7F3EC] border-t border-[#C6A66B]/20 pt-20 pb-12 relative">
+    <footer className="bg-[#2C2621] text-[#FAF6F0] border-t border-[#C6A66B]/30 pt-20 pb-12 relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Main Footer Grid */}

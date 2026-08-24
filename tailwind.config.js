@@ -8,18 +8,18 @@ export default {
     extend: {
       colors: {
         spa: {
-          dark: '#151412',
-          surface: '#211E1A',
-          card: '#1A1815',
-          ivory: '#F7F3EC',
-          beige: '#E8DED0',
+          dark: '#FAF6F0',
+          surface: '#FFFDF9',
+          card: '#F4EDE4',
+          ivory: '#2C2621',
+          beige: '#4A423A',
           gold: '#C6A66B',
           'gold-light': '#D4BC8B',
           'gold-dark': '#A8884C',
-          brown: '#6D5A48',
-          muted: '#A3998E',
-          border: 'rgba(198, 166, 107, 0.2)',
-          'border-light': 'rgba(247, 243, 236, 0.1)',
+          brown: '#8C7561',
+          muted: '#786C60',
+          border: 'rgba(198, 166, 107, 0.25)',
+          'border-light': 'rgba(198, 166, 107, 0.15)',
         }
       },
       fontFamily: {
@@ -31,12 +31,12 @@ export default {
         ultra: '0.35em',
       },
       boxShadow: {
-        'gold-glow': '0 0 25px rgba(198, 166, 107, 0.15)',
-        'luxury': '0 20px 50px rgba(0, 0, 0, 0.5)',
+        'gold-glow': '0 0 25px rgba(198, 166, 107, 0.2)',
+        'luxury': '0 20px 50px rgba(44, 38, 33, 0.08)',
       },
       backgroundImage: {
         'radial-gradient': 'radial-gradient(circle at center, var(--tw-gradient-stops))',
-        'gold-gradient': 'linear-gradient(135deg, #C6A66B 0%, #E8DED0 50%, #C6A66B 100%)',
+        'gold-gradient': 'linear-gradient(135deg, #2C2621 0%, #B58A4B 50%, #785A2D 100%)',
       }
     },
   },
