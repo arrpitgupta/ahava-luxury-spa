@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-dark: #151412;
+    --color-surface: #211E1A;
+    --color-ivory: #F7F3EC;
+    --color-beige: #E8DED0;
+    --color-gold: #C6A66B;
+    --color-brown: #6D5A48;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #151412;
+    color: #F7F3EC;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    background-color: #151412;
+    color: #F7F3EC;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 300;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #151412;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6D5A48;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C6A66B;
+}
+
+/* Custom Utilities for Luxury Aesthetic */
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F7F3EC 0%, #C6A66B 50%, #E8DED0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-subtle {
+  border-color: rgba(198, 166, 107, 0.2);
+}
+
+.bg-radial-luxury {
+  background: radial-gradient(circle at 50% 30%, rgba(33, 30, 26, 0.8) 0%, rgba(21, 20, 18, 1) 70%);
+}
+
+.glass-luxury {
+  background: rgba(21, 20, 18, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.gold-glow-hover {
+  transition: all 0.5s ease;
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(198, 166, 107, 0.15);
+  border-color: rgba(198, 166, 107, 0.4);
+}
+
+/* Custom cursor default pointer behavior */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: default;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
