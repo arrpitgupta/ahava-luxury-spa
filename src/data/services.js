@@ -22,7 +22,7 @@ export const services = [
       { duration: "90 min", price: "₹3,500", numericPrice: 3500 }
     ],
     image: "/assets/services/aroma-oil.jpg",
-    fallbackImage: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787575751/WhatsApp_Image_2026-08-24_at_1.37.53_PM.jpg",
+    fallbackImage: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787593545/WhatsApp_Image_2026-08-24_at_11.05.06_PM.jpg",
     benefits: [
       "Aromatic oil blend soothes mind & sensory noise",
       "Eases muscular tension & improves blood circulation",

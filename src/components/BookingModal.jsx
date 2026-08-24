@@ -46,11 +46,11 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
   const chosenService = services.find((s) => s.id === formData.serviceId) || services[7];
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#151412]/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 lg:p-8 overflow-y-auto">
-      <div className="relative w-full max-w-2xl bg-[#211E1A] border border-[#C6A66B]/40 rounded-sm shadow-luxury overflow-hidden my-auto">
+    <div className="fixed inset-0 z-50 bg-[#2C2621]/60 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 lg:p-8 overflow-y-auto">
+      <div className="relative w-full max-w-2xl bg-[#FFFDF9] border border-[#C6A66B]/40 rounded-lg shadow-luxury overflow-hidden my-auto text-[#2C2621]">
         
         {/* Modal Header */}
-        <div className="flex items-center justify-between p-6 sm:p-8 border-b border-[#C6A66B]/20 bg-[#151412]/80">
+        <div className="flex items-center justify-between p-6 sm:p-8 border-b border-[#C6A66B]/20 bg-[#FAF6F0]">
           <div className="flex items-center gap-4">
             <img
               src="/logo.png"
@@ -58,7 +58,7 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
               className="h-10 sm:h-12 w-auto object-contain"
             />
             <div>
-              <h3 className="font-serif text-xl sm:text-2xl text-[#F7F3EC] uppercase tracking-wide">
+              <h3 className="font-serif text-xl sm:text-2xl text-[#2C2621] uppercase tracking-wide">
                 RESERVE YOUR EXPERIENCE
               </h3>
             </div>
@@ -66,7 +66,7 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
           <button
             onClick={onClose}
             aria-label="Close reservation modal"
-            className="p-2 text-[#F7F3EC] hover:text-[#C6A66B] rounded-full border border-[#C6A66B]/20 transition-colors"
+            className="p-2 text-[#2C2621] hover:text-[#C6A66B] rounded-full border border-[#C6A66B]/30 transition-colors"
           >
             <X className="w-6 h-6" />
           </button>
@@ -80,15 +80,15 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
                 <CheckCircle2 className="w-8 h-8" />
               </div>
 
-              <h4 className="font-serif text-3xl text-[#F7F3EC] uppercase tracking-wide">
+              <h4 className="font-serif text-3xl text-[#2C2621] uppercase tracking-wide">
                 RESERVATION REQUEST RECEIVED
               </h4>
 
-              <p className="font-sans text-sm text-[#E8DED0]/80 font-light leading-relaxed max-w-md mx-auto">
-                Thank you, <span className="text-[#C6A66B] font-medium">{formData.name}</span>. Our spa concierge will contact you shortly at <span className="text-[#C6A66B]">{formData.phone}</span> to confirm your reservation for <span className="text-[#C6A66B]">{chosenService.name}</span>.
+              <p className="font-sans text-sm text-[#4A423A] font-light leading-relaxed max-w-md mx-auto">
+                Thank you, <span className="text-[#C6A66B] font-semibold">{formData.name}</span>. Our spa concierge will contact you shortly at <span className="text-[#C6A66B] font-semibold">{formData.phone}</span> to confirm your reservation for <span className="text-[#C6A66B] font-semibold">{chosenService.name}</span>.
               </p>
 
-              <div className="p-4 bg-[#151412] border border-[#C6A66B]/20 rounded-sm max-w-sm mx-auto text-xs text-[#A3998E] space-y-1">
+              <div className="p-4 bg-[#F4EDE4] border border-[#C6A66B]/30 rounded-md max-w-sm mx-auto text-xs text-[#4A423A] space-y-1 font-medium">
                 <div>Treatment: {chosenService.name} ({chosenService.duration})</div>
                 <div>Price: {chosenService.price}</div>
                 {formData.date && <div>Preferred Date: {formData.date} at {formData.time}</div>}
@@ -96,7 +96,7 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
 
               <button
                 onClick={onClose}
-                className="px-8 py-3 bg-[#C6A66B] text-[#151412] text-xs font-sans uppercase tracking-widest font-semibold hover:bg-[#F7F3EC] transition-colors"
+                className="px-8 py-3 bg-[#C6A66B] text-[#FAF6F0] text-xs font-sans uppercase tracking-widest font-semibold hover:bg-[#a8884c] transition-colors rounded-sm"
               >
                 CLOSE WINDOW
               </button>
@@ -106,14 +106,14 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
               
               {/* Service Selection */}
               <div>
-                <label className="block text-xs font-sans tracking-widest text-[#C6A66B] uppercase mb-2">
+                <label className="block text-xs font-sans tracking-widest text-[#C6A66B] uppercase mb-2 font-semibold">
                   Select Treatment / Ritual
                 </label>
                 <select
                   name="serviceId"
                   value={formData.serviceId}
                   onChange={handleChange}
-                  className="w-full bg-[#151412] border border-[#C6A66B]/30 text-[#F7F3EC] text-sm font-sans p-3 rounded-sm focus:outline-none focus:border-[#C6A66B]"
+                  className="w-full bg-[#FAF6F0] border border-[#C6A66B]/40 text-[#2C2621] text-sm font-sans p-3 rounded-md focus:outline-none focus:border-[#C6A66B]"
                 >
                   {services.map((s) => (
                     s.pricing ? s.pricing.map((p, idx) => (
@@ -132,7 +132,7 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
               {/* Personal Details */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-sans tracking-widest text-[#E8DED0]/80 uppercase mb-1">
+                  <label className="block text-xs font-sans tracking-widest text-[#4A423A] uppercase mb-1 font-semibold">
                     Full Name *
                   </label>
                   <div className="relative">
@@ -143,14 +143,14 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
                       placeholder="e.g. Priya Sharma"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full bg-[#151412] border border-[#C6A66B]/30 text-[#F7F3EC] text-sm p-3 pl-10 rounded-sm focus:outline-none focus:border-[#C6A66B]"
+                      className="w-full bg-[#FAF6F0] border border-[#C6A66B]/40 text-[#2C2621] text-sm p-3 pl-10 rounded-md focus:outline-none focus:border-[#C6A66B]"
                     />
                     <User className="w-4 h-4 text-[#C6A66B] absolute left-3 top-3.5" />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-sans tracking-widest text-[#E8DED0]/80 uppercase mb-1">
+                  <label className="block text-xs font-sans tracking-widest text-[#4A423A] uppercase mb-1 font-semibold">
                     Phone Number *
                   </label>
                   <div className="relative">
@@ -161,7 +161,7 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
                       placeholder="090355 59695"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full bg-[#151412] border border-[#C6A66B]/30 text-[#F7F3EC] text-sm p-3 pl-10 rounded-sm focus:outline-none focus:border-[#C6A66B]"
+                      className="w-full bg-[#FAF6F0] border border-[#C6A66B]/40 text-[#2C2621] text-sm p-3 pl-10 rounded-md focus:outline-none focus:border-[#C6A66B]"
                     />
                     <Phone className="w-4 h-4 text-[#C6A66B] absolute left-3 top-3.5" />
                   </div>
@@ -171,7 +171,7 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
               {/* Email + Guests */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-sans tracking-widest text-[#E8DED0]/80 uppercase mb-1">
+                  <label className="block text-xs font-sans tracking-widest text-[#4A423A] uppercase mb-1 font-semibold">
                     Email Address *
                   </label>
                   <div className="relative">
@@ -182,21 +182,21 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
                       placeholder="priya@example.com"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full bg-[#151412] border border-[#C6A66B]/30 text-[#F7F3EC] text-sm p-3 pl-10 rounded-sm focus:outline-none focus:border-[#C6A66B]"
+                      className="w-full bg-[#FAF6F0] border border-[#C6A66B]/40 text-[#2C2621] text-sm p-3 pl-10 rounded-md focus:outline-none focus:border-[#C6A66B]"
                     />
                     <Mail className="w-4 h-4 text-[#C6A66B] absolute left-3 top-3.5" />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-sans tracking-widest text-[#E8DED0]/80 uppercase mb-1">
+                  <label className="block text-xs font-sans tracking-widest text-[#4A423A] uppercase mb-1 font-semibold">
                     Number of Guests
                   </label>
                   <select
                     name="guests"
                     value={formData.guests}
                     onChange={handleChange}
-                    className="w-full bg-[#151412] border border-[#C6A66B]/30 text-[#F7F3EC] text-sm p-3 rounded-sm focus:outline-none focus:border-[#C6A66B]"
+                    className="w-full bg-[#FAF6F0] border border-[#C6A66B]/40 text-[#2C2621] text-sm p-3 rounded-md focus:outline-none focus:border-[#C6A66B]"
                   >
                     <option value="1 Guest">1 Guest</option>
                     <option value="2 Guests (Couple)">2 Guests (Couple Ritual)</option>
@@ -209,7 +209,7 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
               {/* Preferred Date & Time */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-sans tracking-widest text-[#E8DED0]/80 uppercase mb-1">
+                  <label className="block text-xs font-sans tracking-widest text-[#4A423A] uppercase mb-1 font-semibold">
                     Preferred Date
                   </label>
                   <input
@@ -217,19 +217,19 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
                     name="date"
                     value={formData.date}
                     onChange={handleChange}
-                    className="w-full bg-[#151412] border border-[#C6A66B]/30 text-[#F7F3EC] text-sm p-3 rounded-sm focus:outline-none focus:border-[#C6A66B]"
+                    className="w-full bg-[#FAF6F0] border border-[#C6A66B]/40 text-[#2C2621] text-sm p-3 rounded-md focus:outline-none focus:border-[#C6A66B]"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-sans tracking-widest text-[#E8DED0]/80 uppercase mb-1">
+                  <label className="block text-xs font-sans tracking-widest text-[#4A423A] uppercase mb-1 font-semibold">
                     Preferred Time Slot
                   </label>
                   <select
                     name="time"
                     value={formData.time}
                     onChange={handleChange}
-                    className="w-full bg-[#151412] border border-[#C6A66B]/30 text-[#F7F3EC] text-sm p-3 rounded-sm focus:outline-none focus:border-[#C6A66B]"
+                    className="w-full bg-[#FAF6F0] border border-[#C6A66B]/40 text-[#2C2621] text-sm p-3 rounded-md focus:outline-none focus:border-[#C6A66B]"
                   >
                     <option value="10:00">10:00 AM — Morning Quiet</option>
                     <option value="12:00">12:00 PM — Midday Renewal</option>
@@ -243,7 +243,7 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
 
               {/* Message */}
               <div>
-                <label className="block text-xs font-sans tracking-widest text-[#E8DED0]/80 uppercase mb-1">
+                <label className="block text-xs font-sans tracking-widest text-[#4A423A] uppercase mb-1 font-semibold">
                   Special Requests / Allergies / Notes
                 </label>
                 <textarea
@@ -252,20 +252,20 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
                   placeholder="Mention any physical tension areas, pressure preferences, or health considerations..."
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full bg-[#151412] border border-[#C6A66B]/30 text-[#F7F3EC] text-sm p-3 rounded-sm focus:outline-none focus:border-[#C6A66B]"
+                  className="w-full bg-[#FAF6F0] border border-[#C6A66B]/40 text-[#2C2621] text-sm p-3 rounded-md focus:outline-none focus:border-[#C6A66B]"
                 ></textarea>
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-4 bg-[#C6A66B] text-[#151412] text-xs font-sans uppercase tracking-ultra font-semibold hover:bg-[#F7F3EC] transition-all duration-300 shadow-luxury flex items-center justify-center gap-2"
+                className="w-full py-4 bg-[#C6A66B] text-[#FAF6F0] text-xs font-sans uppercase tracking-ultra font-semibold hover:bg-[#a8884c] transition-all duration-300 shadow-luxury flex items-center justify-center gap-2 rounded-md"
               >
                 <Sparkles className="w-4 h-4" />
                 <span>SUBMIT RESERVATION ENQUIRY</span>
               </button>
 
-              <p className="text-[10px] text-center text-[#A3998E] font-sans">
+              <p className="text-[10px] text-center text-[#786C60] font-sans font-medium">
                 * No immediate payment is required. Our concierge will contact you to finalize timing & custom preferences.
               </p>
             </form>

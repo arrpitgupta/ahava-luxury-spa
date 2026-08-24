@@ -50,7 +50,7 @@ export default function WhyAhava() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 lg:py-36 bg-[#211E1A] text-[#F7F3EC] relative overflow-hidden border-t border-b border-[#C6A66B]/15"
+      className="py-24 lg:py-36 bg-[#F4EDE4] text-[#2C2621] relative overflow-hidden border-t border-b border-[#C6A66B]/20"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         
@@ -58,17 +58,17 @@ export default function WhyAhava() {
         <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-20 space-y-4">
           <div className="inline-flex items-center gap-3">
             <span className="w-8 h-[1px] bg-[#C6A66B]"></span>
-            <span className="text-[#C6A66B] text-xs font-sans tracking-[0.3em] uppercase font-medium">
+            <span className="text-[#C6A66B] text-xs font-sans tracking-[0.3em] uppercase font-semibold">
               THE AHAVA DIFFERENCE
             </span>
             <span className="w-8 h-[1px] bg-[#C6A66B]"></span>
           </div>
 
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-[#F7F3EC] font-light">
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-[#2C2621] font-light">
             WHY <span className="italic text-gold-gradient font-normal">AHAVA</span>
           </h2>
 
-          <p className="font-sans text-sm sm:text-base text-[#E8DED0]/80 font-light leading-relaxed">
+          <p className="font-sans text-sm sm:text-base text-[#4A423A] font-light leading-relaxed">
             Crafted for those who appreciate understated luxury, authentic care, and uncompromised excellence.
           </p>
         </div>
@@ -81,36 +81,36 @@ export default function WhyAhava() {
               <div
                 key={feature.number}
                 ref={(el) => (cardsRef.current[idx] = el)}
-                className="bg-[#151412] p-8 border border-[#C6A66B]/20 rounded-sm hover:border-[#C6A66B]/60 transition-all duration-500 flex flex-col justify-between group gold-glow-hover"
+                className="bg-[#FFFDF9] p-8 border border-[#C6A66B]/30 rounded-lg hover:border-[#C6A66B] transition-all duration-500 flex flex-col justify-between group gold-glow-hover shadow-luxury"
               >
                 <div>
                   {/* Top Meta: Number + Icon */}
                   <div className="flex items-center justify-between mb-8">
-                    <span className="font-serif text-3xl text-[#C6A66B]/60 group-hover:text-[#C6A66B] transition-colors font-light">
+                    <span className="font-serif text-3xl text-[#C6A66B] group-hover:text-[#B58A4B] transition-colors font-light">
                       {feature.number}
                     </span>
-                    <div className="p-3 bg-[#211E1A] border border-[#C6A66B]/30 rounded-full text-[#C6A66B] group-hover:bg-[#C6A66B] group-hover:text-[#151412] transition-all">
+                    <div className="p-3 bg-[#FAF6F0] border border-[#C6A66B]/30 rounded-full text-[#C6A66B] group-hover:bg-[#C6A66B] group-hover:text-[#FAF6F0] transition-all">
                       <Icon className="w-4 h-4" />
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#F7F3EC] uppercase tracking-wider mb-3 font-normal">
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#2C2621] uppercase tracking-wider mb-3 font-normal">
                     {feature.title}
                   </h3>
 
                   {/* Core Description */}
-                  <p className="font-sans text-sm text-[#E8DED0] font-medium leading-relaxed mb-4">
+                  <p className="font-sans text-sm text-[#2C2621] font-medium leading-relaxed mb-4">
                     {feature.description}
                   </p>
 
                   {/* Extended Details */}
-                  <p className="font-sans text-xs text-[#E8DED0]/65 font-light leading-relaxed border-t border-[#C6A66B]/15 pt-4">
+                  <p className="font-sans text-xs text-[#4A423A] font-light leading-relaxed border-t border-[#C6A66B]/20 pt-4">
                     {feature.details}
                   </p>
                 </div>
 
-                <div className="mt-8 pt-4 flex items-center gap-2 text-[10px] font-sans tracking-widest text-[#C6A66B] uppercase opacity-80 group-hover:opacity-100 transition-opacity">
+                <div className="mt-8 pt-4 flex items-center gap-2 text-[10px] font-sans tracking-widest text-[#C6A66B] uppercase font-semibold">
                   <span className="w-4 h-[1px] bg-[#C6A66B]"></span>
                   <span>SANCTUARY STANDARD</span>
                 </div>
