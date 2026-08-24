@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import ScrollToTop from './components/ScrollToTop';
 import CustomCursor from './components/CustomCursor';
 import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
@@ -19,6 +20,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
+      <Analytics />
       <div className="min-h-screen bg-[#151412] text-[#F7F3EC] font-sans relative selection:bg-[#C6A66B] selection:text-[#151412]">
         
         {/* Custom Desktop Cursor */}
