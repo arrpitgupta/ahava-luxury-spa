@@ -22,7 +22,7 @@ export const services = [
       { duration: "90 min", price: "₹3,500", numericPrice: 3500 }
     ],
     image: "/assets/services/aroma-oil.jpg",
-    fallbackImage: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80",
+    fallbackImage: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787575751/WhatsApp_Image_2026-08-24_at_1.37.53_PM.jpg",
     benefits: [
       "Aromatic oil blend soothes mind & sensory noise",
       "Eases muscular tension & improves blood circulation",
@@ -184,7 +184,7 @@ export const services = [
       { duration: "90 min", price: "₹6,000", numericPrice: 6000 }
     ],
     image: "/assets/services/couple-massage.jpg",
-    fallbackImage: "https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=1200&q=80",
+    fallbackImage: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787575603/WhatsApp_Image_2026-08-24_at_1.37.52_PM_1.jpg",
     benefits: [
       "Private VIP suite setup for shared relaxation",
       "Customized pressure & massage techniques for each guest",
@@ -210,7 +210,7 @@ export const services = [
       { duration: "90 min", price: "₹9,000", numericPrice: 9000 }
     ],
     image: "/assets/services/vip-jacuzzi.jpg",
-    fallbackImage: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80",
+    fallbackImage: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787575750/WhatsApp_Image_2026-08-24_at_1.37.58_PM.jpg",
     benefits: [
       "Exclusive access to private master VIP suite",
       "Private hydrotherapy Jacuzzi tub soak for two",
@@ -236,7 +236,7 @@ export const services = [
       { duration: "30 min", price: "₹1,500", numericPrice: 1500 }
     ],
     image: "/assets/services/steam-bath.jpg",
-    fallbackImage: "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1200&q=80",
+    fallbackImage: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787575604/WhatsApp_Image_2026-08-24_at_1.37.55_PM.jpg",
     benefits: [
       "Flushes out skin impurities & opens pores",
       "Relieves sinus congestion & clears airways",

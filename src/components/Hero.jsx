@@ -38,7 +38,7 @@ export default function Hero({ onOpenBooking }) {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           ref={imageRef}
-          src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=90"
+          src="https://res.cloudinary.com/e6ehhcen/image/upload/v1787575394/WhatsApp_Image_2026-08-24_at_1.37.52_PM.jpg"
           alt="Ahava Luxury Spa Sanctuary Atmosphere"
           className="w-full h-full object-cover object-center transform scale-110 filter brightness-[0.65]"
         />
@@ -53,7 +53,7 @@ export default function Hero({ onOpenBooking }) {
 
       {/* Main Content Box */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 text-center flex flex-col items-center justify-center py-20">
-        
+
         {/* Eyebrow Label */}
         <div ref={eyebrowRef} className="opacity-0 mb-6 flex items-center gap-3">
           <span className="w-8 h-[1px] bg-[#C6A66B]/60 hidden sm:inline-block"></span>

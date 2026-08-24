@@ -7,6 +7,7 @@ import ServiceCard from '../components/ServiceCard';
 import GalleryCard from '../components/GalleryCard';
 import Testimonials from '../components/Testimonials';
 import WhyAhava from '../components/WhyAhava';
+import ReelVideoSection from '../components/ReelVideoSection';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import { business } from '../config/business';
 import { animateHero, animateFadeUp, animateBatch, initParallax, gsap } from '../animations/gsap';
@@ -18,7 +19,6 @@ export default function Home() {
   const headingRef = useRef(null);
   const descRef = useRef(null);
   const buttonsRef = useRef(null);
-  const scrollRef = useRef(null);
   const experienceImgRef = useRef(null);
 
   useEffect(() => {
@@ -31,7 +31,6 @@ export default function Home() {
       headingRef,
       descRef,
       buttonsRef,
-      scrollRef,
     });
 
     if (experienceImgRef.current) {
@@ -49,7 +48,7 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="space-y-0">
-      
+
       {/* 1. HERO SECTION */}
       <section
         id="hero"
@@ -58,7 +57,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             ref={imageRef}
-            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=90"
+            src="https://res.cloudinary.com/e6ehhcen/image/upload/v1787575394/WhatsApp_Image_2026-08-24_at_1.37.52_PM.jpg"
             alt="Ahava Luxury Spa Sanctuary Atmosphere"
             className="w-full h-full object-cover object-center transform scale-110 filter brightness-[0.65]"
           />
@@ -94,11 +93,11 @@ export default function Home() {
 
           <div
             ref={buttonsRef}
-            className="opacity-0 flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto"
+            className="opacity-0 flex flex-col sm:flex-row items-center gap-4 sm:gap-5 w-full sm:w-auto"
           >
             <button
               onClick={handleWhatsAppBook}
-              className="w-full sm:w-auto px-9 py-4 bg-[#25D366] text-[#151412] text-xs font-sans uppercase tracking-ultra font-semibold hover:bg-[#20ba5a] transition-all duration-500 shadow-luxury flex items-center justify-center gap-3 group"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-[#25D366] text-[#151412] text-xs font-sans uppercase tracking-widest font-semibold hover:bg-[#20ba5a] transition-all duration-500 shadow-luxury flex items-center justify-center gap-2.5 group whitespace-nowrap"
             >
               <MessageCircle className="w-4 h-4 shrink-0" />
               <span>BOOK ON WHATSAPP</span>
@@ -106,23 +105,11 @@ export default function Home() {
 
             <Link
               to="/services"
-              className="w-full sm:w-auto px-9 py-4 border border-[#C6A66B]/50 hover:border-[#C6A66B] text-[#F7F3EC] hover:text-[#C6A66B] text-xs font-sans uppercase tracking-ultra font-medium transition-all duration-500 bg-[#151412]/40 backdrop-blur-sm flex items-center justify-center gap-3 group"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 border border-[#C6A66B]/50 hover:border-[#C6A66B] text-[#F7F3EC] hover:text-[#C6A66B] text-xs font-sans uppercase tracking-widest font-medium transition-all duration-500 bg-[#151412]/60 backdrop-blur-sm flex items-center justify-center gap-2.5 group whitespace-nowrap"
             >
-              <Compass className="w-4 h-4 transition-transform group-hover:rotate-45" />
+              <Compass className="w-4 h-4 shrink-0 transition-transform group-hover:rotate-45" />
               <span>EXPLORE TREATMENTS</span>
             </Link>
-          </div>
-        </div>
-
-        <div
-          ref={scrollRef}
-          className="opacity-0 absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer z-10"
-        >
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#C6A66B]/70 font-sans">
-            SCROLL
-          </span>
-          <div className="w-6 h-10 border border-[#C6A66B]/30 rounded-full flex justify-center p-1">
-            <div className="w-1 h-2 bg-[#C6A66B] rounded-full animate-bounce"></div>
           </div>
         </div>
       </section>
@@ -131,11 +118,11 @@ export default function Home() {
       <section className="py-24 lg:py-32 bg-[#151412] text-[#F7F3EC] relative border-t border-[#C6A66B]/15">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
+
             <div className="lg:col-span-6 relative">
               <div className="relative z-10 aspect-[3/4] overflow-hidden rounded-sm border border-[#C6A66B]/30 shadow-luxury group">
                 <img
-                  src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1000&q=80"
+                  src="https://res.cloudinary.com/e6ehhcen/image/upload/v1787575750/WhatsApp_Image_2026-08-24_at_1.37.54_PM.jpg"
                   alt="Ahava Luxury Spa Sanctuary Experience"
                   className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 filter brightness-[0.9]"
                   loading="lazy"
@@ -185,10 +172,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 2.5 VIRTUAL REEL TOUR SECTION */}
+      <ReelVideoSection />
+
       {/* 3. SIGNATURE TREATMENTS PREVIEW */}
       <section className="py-24 lg:py-32 bg-[#211E1A] text-[#F7F3EC] border-t border-b border-[#C6A66B]/15">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          
+
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8 pb-8 border-b border-[#C6A66B]/20">
             <div className="space-y-4 max-w-2xl">
               <div className="flex items-center gap-3">
@@ -262,9 +252,9 @@ export default function Home() {
       <WhyAhava />
 
       {/* 6. GALLERY PREVIEW */}
-      <section className="py-24 bg-[#151412] text-[#F7F3EC] border-t border-[#C6A66B]/15">
+      {/* <section className="py-24 bg-[#151412] text-[#F7F3EC] border-t border-[#C6A66B]/15">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          
+
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
             <div className="space-y-4 max-w-2xl">
               <div className="flex items-center gap-3">
@@ -290,13 +280,13 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredGallery.map((item) => (
               <Link key={item.id} to="/gallery">
-                <GalleryCard item={item} onClick={() => {}} />
+                <GalleryCard item={item} onClick={() => { }} />
               </Link>
             ))}
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* 7. TESTIMONIALS */}
       <Testimonials />
