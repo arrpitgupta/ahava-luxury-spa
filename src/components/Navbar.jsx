@@ -78,6 +78,7 @@ export default function Navbar() {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
+    // { name: 'Booking', path: '/booking' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -91,27 +92,25 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-500 ${
-        useSolidBg
-          ? 'bg-[#151412]/95 backdrop-blur-md border-b border-[#C6A66B]/20 py-3.5 shadow-luxury'
-          : 'bg-gradient-to-b from-[#151412]/80 to-transparent py-5'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${useSolidBg
+        ? 'bg-[#151412]/95 backdrop-blur-md border-b border-[#C6A66B]/20 py-3 sm:py-3.5 shadow-luxury'
+        : 'bg-gradient-to-b from-[#151412]/50 via-[#151412]/20 to-transparent py-4 sm:py-5'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          
-          {/* Typographic Logo */}
+
+          {/* Brand Logo */}
           <Link
             to="/"
-            className="group flex flex-col focus:outline-none"
+            className="group focus:outline-none"
             aria-label="Ahava Luxury Spa Home"
           >
-            <span className="font-serif text-2xl sm:text-3xl tracking-[0.25em] text-[#F7F3EC] group-hover:text-[#C6A66B] transition-colors font-light uppercase">
-              AHAVA
-            </span>
-            <span className="text-[9px] sm:text-[10px] tracking-[0.4em] text-[#C6A66B] font-sans uppercase font-medium -mt-1">
-              LUXURY SPA
-            </span>
+            <img
+              src="/logo.png"
+              alt="Ahava Luxury Spa"
+              className="h-11 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -122,11 +121,9 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text-xs uppercase tracking-widest transition-colors relative py-1 ${
-                    isActive ? 'text-[#C6A66B] font-medium' : 'text-[#E8DED0]/85 hover:text-[#C6A66B]'
-                  } after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:bg-[#C6A66B] ${
-                    isActive ? 'after:w-full' : 'after:w-0 hover:after:w-full'
-                  } after:transition-all after:duration-300`}
+                  className={`text-xs uppercase tracking-widest transition-colors relative py-1 ${isActive ? 'text-[#C6A66B] font-medium' : 'text-[#E8DED0]/85 hover:text-[#C6A66B]'
+                    } after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:bg-[#C6A66B] ${isActive ? 'after:w-full' : 'after:w-0 hover:after:w-full'
+                    } after:transition-all after:duration-300`}
                 >
                   {link.name}
                 </Link>
@@ -134,18 +131,24 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Primary CTA Button (WhatsApp First) */}
-          <div className="hidden sm:flex items-center space-x-4">
-            <button
-              onClick={handleWhatsAppClick}
-              className="relative group px-6 py-2.5 overflow-hidden border border-[#25D366]/80 text-xs font-sans tracking-widest uppercase text-[#F7F3EC] transition-all duration-500 hover:border-[#25D366] focus:outline-none"
+          {/* Primary CTA Buttons (Booking Page + WhatsApp) */}
+          <div className="hidden sm:flex items-center space-x-3">
+            <Link
+              to="/booking"
+              className="px-5 py-2.5 bg-[#C6A66B] text-[#151412] text-xs font-sans tracking-widest uppercase font-semibold hover:bg-[#d6b77c] transition-all rounded-sm shadow-gold-glow"
             >
-              <span className="absolute inset-0 bg-[#25D366] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
-              <span className="relative z-10 group-hover:text-[#151412] font-semibold flex items-center gap-2">
-                <MessageCircle className="w-4 h-4 fill-current" />
-                <span>BOOK ON WHATSAPP</span>
+              BOOK APPOINTMENT
+            </Link>
+
+            {/* <button
+              onClick={handleWhatsAppClick}
+              className="relative group px-4 py-2.5 overflow-hidden border border-[#25D366]/80 text-xs font-sans tracking-widest uppercase text-[#F7F3EC] transition-all duration-500 hover:border-[#25D366] focus:outline-none rounded-sm"
+              title="Chat directly on WhatsApp"
+            >
+              <span className="relative z-10 group-hover:text-[#25D366] font-semibold flex items-center gap-1.5">
+                <MessageCircle className="w-4 h-4 text-[#25D366] fill-current" />
               </span>
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile Menu Toggle Button */}
@@ -175,13 +178,12 @@ export default function Navbar() {
         className="fixed inset-0 bg-[#151412] z-[100] flex flex-col justify-between p-6 sm:p-8 invisible opacity-0 lg:hidden overflow-y-auto min-h-screen"
       >
         <div className="flex items-center justify-between border-b border-[#C6A66B]/20 pb-6">
-          <Link to="/" onClick={() => setMobileMenuOpen(false)} className="flex flex-col">
-            <span className="font-serif text-2xl tracking-[0.25em] text-[#F7F3EC] uppercase font-light">
-              AHAVA
-            </span>
-            <span className="text-[9px] tracking-[0.4em] text-[#C6A66B] font-sans uppercase font-medium -mt-1">
-              LUXURY SPA
-            </span>
+          <Link to="/" onClick={() => setMobileMenuOpen(false)}>
+            <img
+              src="/logo.png"
+              alt="Ahava Luxury Spa"
+              className="h-10 sm:h-12 w-auto object-contain"
+            />
           </Link>
           <button
             onClick={() => setMobileMenuOpen(false)}
@@ -205,9 +207,8 @@ export default function Navbar() {
                 <Link
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`font-serif text-3xl sm:text-4xl flex items-center justify-between tracking-wide transition-colors ${
-                    isActive ? 'text-[#C6A66B]' : 'text-[#F7F3EC] hover:text-[#C6A66B]'
-                  }`}
+                  className={`font-serif text-3xl sm:text-4xl flex items-center justify-between tracking-wide transition-colors ${isActive ? 'text-[#C6A66B]' : 'text-[#F7F3EC] hover:text-[#C6A66B]'
+                    }`}
                 >
                   <span>{link.name}</span>
                   <span className="text-xs font-sans text-[#C6A66B] font-light">0{idx + 1}</span>

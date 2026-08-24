@@ -3,7 +3,7 @@ import Breadcrumbs from './Breadcrumbs';
 
 export default function PageHero({ eyebrow, title, italicTitle, description, breadcrumbs, bgImage }) {
   return (
-    <section className="relative bg-[#151412] text-[#F7F3EC] py-20 lg:py-28 border-b border-[#C6A66B]/20 overflow-hidden">
+    <section className="relative bg-[#151412] text-[#F7F3EC] pt-28 sm:pt-32 pb-20 lg:pb-28 border-b border-[#C6A66B]/20 overflow-hidden">
       {/* Background Photography Texture if provided */}
       {bgImage && (
         <div className="absolute inset-0 z-0">

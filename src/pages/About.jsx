@@ -85,7 +85,7 @@ export default function About() {
             <div className="lg:col-span-6">
               <div className="aspect-[4/3] rounded-sm overflow-hidden border border-[#C6A66B]/30 shadow-luxury">
                 <img
-                  src="https://res.cloudinary.com/e6ehhcen/image/upload/v1787575750/WhatsApp_Image_2026-08-24_at_1.37.54_PM.jpg"
+                  src="https://res.cloudinary.com/e6ehhcen/image/upload/v1787587474/WhatsApp_Image_2026-08-24_at_9.24.08_PM.jpg"
                   alt="The Art of Slowing Down at Ahava Luxury Spa"
                   className="w-full h-full object-cover"
                 />

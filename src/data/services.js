@@ -130,7 +130,7 @@ export const services = [
       { duration: "90 min", price: "₹4,000", numericPrice: 4000 }
     ],
     image: "/assets/services/thai-massage.jpg",
-    fallbackImage: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80",
+    fallbackImage: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787587472/WhatsApp_Image_2026-08-24_at_9.19.17_PM_2.jpg",
     benefits: [
       "Increases spinal flexibility & range of motion",
       "Relieves joint tension without oil application",

@@ -33,7 +33,7 @@ export default function Gallery() {
 
   return (
     <div className="bg-[#151412] text-[#F7F3EC] min-h-screen">
-      
+
       {/* Page Hero */}
       <PageHero
         eyebrow="A VISUAL INVITATION"
@@ -47,18 +47,17 @@ export default function Gallery() {
       {/* Main Gallery Section */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          
+
           {/* Animated Category Filter Tabs */}
           <div className="flex items-center gap-3 overflow-x-auto pb-6 mb-12 scrollbar-none border-b border-[#C6A66B]/20">
             {galleryCategories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => handleCategoryChange(cat.categorySlug)}
-                className={`px-5 py-2 text-xs font-sans tracking-widest uppercase transition-all duration-300 whitespace-nowrap rounded-full ${
-                  activeCategory === cat.categorySlug
+                className={`px-5 py-2 text-xs font-sans tracking-widest uppercase transition-all duration-300 whitespace-nowrap rounded-full ${activeCategory === cat.categorySlug
                     ? 'bg-[#C6A66B] text-[#151412] font-semibold shadow-gold-glow'
                     : 'bg-[#211E1A] text-[#E8DED0]/70 hover:text-[#F7F3EC] hover:bg-[#C6A66B]/20 border border-[#C6A66B]/20'
-                }`}
+                  }`}
               >
                 {cat.label}
               </button>
