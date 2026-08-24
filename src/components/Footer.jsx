@@ -32,13 +32,12 @@ export default function Footer() {
           
           {/* Col 1: Brand Identity */}
           <div className="lg:col-span-4 space-y-6">
-            <Link to="/" className="flex flex-col inline-block">
-              <span className="font-serif text-3xl tracking-[0.25em] text-[#F7F3EC] uppercase font-light">
-                AHAVA
-              </span>
-              <span className="text-[10px] tracking-[0.4em] text-[#C6A66B] font-sans uppercase font-medium -mt-1">
-                LUXURY SPA
-              </span>
+            <Link to="/" className="inline-block focus:outline-none">
+              <img
+                src="/logo.png"
+                alt="Ahava Luxury Spa"
+                className="h-14 sm:h-16 w-auto object-contain"
+              />
             </Link>
 
             <p className="font-serif italic text-lg text-[#E8DED0]/80 font-light">
@@ -145,13 +144,22 @@ export default function Footer() {
               </p>
             </div>
 
-            <button
-              onClick={handleWhatsAppClick}
-              className="w-full py-3 px-4 bg-[#25D366] text-[#151412] text-xs font-sans uppercase tracking-wider font-semibold hover:bg-[#20ba5a] transition-all flex items-center justify-center gap-2 rounded-sm shrink-0 whitespace-nowrap shadow-sm"
-            >
-              <MessageCircle className="w-4 h-4 shrink-0" />
-              <span>BOOK ON WHATSAPP</span>
-            </button>
+            <div className="space-y-2.5">
+              <Link
+                to="/booking"
+                className="w-full py-3 px-4 bg-[#C6A66B] text-[#151412] text-xs font-sans uppercase tracking-wider font-semibold hover:bg-[#d6b77c] transition-all flex items-center justify-center gap-2 rounded-sm shadow-gold-glow"
+              >
+                <span>BOOK APPOINTMENT ONLINE</span>
+              </Link>
+
+              <button
+                onClick={handleWhatsAppClick}
+                className="w-full py-2.5 px-4 border border-[#25D366]/60 text-[#25D366] hover:bg-[#25D366] hover:text-[#151412] text-xs font-sans uppercase tracking-wider font-semibold transition-all flex items-center justify-center gap-2 rounded-sm shrink-0 whitespace-nowrap"
+              >
+                <MessageCircle className="w-4 h-4 shrink-0" />
+                <span>CHAT ON WHATSAPP</span>
+              </button>
+            </div>
           </div>
 
         </div>

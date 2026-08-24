@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowDown, Calendar, Compass } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { MessageCircle, Compass } from 'lucide-react';
 import { animateHero } from '../animations/gsap';
+import { getWhatsAppUrl } from '../utils/whatsapp';
+import { heroConfig } from '../config/hero';
 
 export default function Hero({ onOpenBooking }) {
   const imageRef = useRef(null);
@@ -21,103 +24,107 @@ export default function Hero({ onOpenBooking }) {
     });
   }, []);
 
-  const handleScrollToServices = (e) => {
-    e.preventDefault();
-    const servicesSec = document.querySelector('#services');
-    if (servicesSec) {
-      servicesSec.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleWhatsAppBook = () => {
+    const url = getWhatsAppUrl("Hello Ahava Luxury Spa, I would like to book a luxury treatment experience.");
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#151412] -mt-20 pt-20"
+      className="relative min-h-screen flex items-center overflow-hidden bg-[#151412] pt-28 sm:pt-32 pb-16 lg:pb-24"
     >
-      {/* Background Image with Dark Luxury Gradient Overlay */}
+      {/* Background Spa Sanctuary Photography */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           ref={imageRef}
-          src="https://res.cloudinary.com/e6ehhcen/image/upload/v1787575394/WhatsApp_Image_2026-08-24_at_1.37.52_PM.jpg"
+          src={heroConfig.image}
+          onError={(e) => {
+            e.target.src = heroConfig.fallbackImage;
+          }}
           alt="Ahava Luxury Spa Sanctuary Atmosphere"
-          className="w-full h-full object-cover object-center transform scale-110 filter brightness-[0.65]"
+          className="w-full h-full object-cover object-center transform scale-[1.05] filter brightness-[0.92] contrast-[1.02]"
         />
-        {/* Gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#151412] via-[#151412]/40 to-[#151412]/70"></div>
-        <div className="absolute inset-0 bg-radial-luxury opacity-60"></div>
+        
+        {/* Subtle Layered Overlay: Light Vignette Gradient for Text Contrast, 70% Right Open */}
+        <div className="absolute inset-0 bg-[#151412]/20 z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#151412]/90 via-[#151412]/50 to-transparent z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#151412] via-transparent to-[#151412]/40 z-0"></div>
       </div>
 
-      {/* Decorative Accent Lines */}
-      <div className="absolute top-1/4 left-8 hidden lg:block w-[1px] h-32 bg-gradient-to-b from-transparent via-[#C6A66B]/30 to-transparent"></div>
-      <div className="absolute bottom-1/4 right-8 hidden lg:block w-[1px] h-32 bg-gradient-to-b from-transparent via-[#C6A66B]/30 to-transparent"></div>
+      {/* Editorial Left-Aligned Content Container */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 flex flex-col items-start justify-center pt-8 sm:pt-12 pb-12">
+        
+        <div className="max-w-[620px] text-left">
+          {/* Eyebrow Label */}
+          <div ref={eyebrowRef} className="opacity-0 mb-4 flex items-center gap-3">
+            <span className="w-6 h-[1px] bg-[#C6A66B]"></span>
+            <span className="text-[#C6A66B] text-xs font-sans tracking-[0.3em] uppercase font-medium">
+              {heroConfig.eyebrow}
+            </span>
+          </div>
 
-      {/* Main Content Box */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 text-center flex flex-col items-center justify-center py-20">
+          {/* Controlled Editorial Left-Aligned Heading */}
+          <h1
+            ref={headingRef}
+            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[76px] xl:text-[84px] tracking-tight leading-[1.08] uppercase font-light mb-6 max-w-[600px]"
+          >
+            <span className="hero-line block opacity-0 text-[#F7F3EC]">
+              {heroConfig.titleLineOne}
+            </span>
+            <span className="hero-line block opacity-0 text-[#C6A66B] italic font-normal">
+              {heroConfig.titleLineTwo}
+            </span>
+          </h1>
 
-        {/* Eyebrow Label */}
-        <div ref={eyebrowRef} className="opacity-0 mb-6 flex items-center gap-3">
-          <span className="w-8 h-[1px] bg-[#C6A66B]/60 hidden sm:inline-block"></span>
-          <span className="text-[#C6A66B] text-xs sm:text-sm font-sans tracking-[0.35em] uppercase font-medium">
-            AHAVA LUXURY SPA
-          </span>
-          <span className="w-8 h-[1px] bg-[#C6A66B]/60 hidden sm:inline-block"></span>
+          {/* Short Supporting Description (Max 450px width) */}
+          <p
+            ref={descRef}
+            className="opacity-0 font-sans text-base sm:text-lg text-[#E8DED0]/85 max-w-[450px] font-light leading-relaxed mb-8 tracking-wide"
+          >
+            {heroConfig.description}
+          </p>
+
+          {/* Action CTAs */}
+          <div
+            ref={buttonsRef}
+            className="opacity-0 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto"
+          >
+            {/* Primary CTA: Champagne / Gold */}
+            <button
+              onClick={handleWhatsAppBook}
+              className="px-7 sm:px-8 py-3.5 sm:py-4 bg-[#C6A66B] text-[#151412] text-xs font-sans uppercase tracking-widest font-semibold hover:bg-[#d6b77c] transition-all duration-300 shadow-luxury flex items-center justify-center gap-3 rounded-sm group whitespace-nowrap"
+            >
+              <MessageCircle className="w-4 h-4 shrink-0 transition-transform group-hover:scale-105 text-[#151412]" />
+              <span>BOOK ON WHATSAPP</span>
+            </button>
+
+            {/* Secondary CTA: Outlined Transparent */}
+            <Link
+              to="/services"
+              className="px-7 sm:px-8 py-3.5 sm:py-4 border border-[#C6A66B]/50 hover:border-[#C6A66B] text-[#F7F3EC] hover:text-[#C6A66B] text-xs font-sans uppercase tracking-widest font-medium transition-all duration-300 bg-[#151412]/30 backdrop-blur-xs flex items-center justify-center gap-3 rounded-sm group whitespace-nowrap"
+            >
+              <Compass className="w-4 h-4 shrink-0 transition-transform duration-300 group-hover:rotate-45" />
+              <span>EXPLORE TREATMENTS</span>
+            </Link>
+          </div>
         </div>
 
-        {/* Main Editorial Heading */}
-        <h1
-          ref={headingRef}
-          className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-[#F7F3EC] tracking-tight leading-[0.95] uppercase font-light mb-8 max-w-4xl"
-        >
-          <span className="hero-line block opacity-0">WHERE BEAUTY</span>
-          <span className="hero-line block opacity-0 text-gold-gradient italic font-normal">
-            MEETS SERENITY
-          </span>
-        </h1>
-
-        {/* Supporting Description */}
-        <p
-          ref={descRef}
-          className="opacity-0 font-sans text-sm sm:text-base md:text-lg text-[#E8DED0]/85 max-w-2xl font-light leading-relaxed mb-12 tracking-wide"
-        >
-          Escape the ordinary and enter a world of refined relaxation, restorative treatments and timeless wellness.
-        </p>
-
-        {/* CTA Action Buttons */}
-        <div
-          ref={buttonsRef}
-          className="opacity-0 flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto"
-        >
-          <button
-            onClick={onOpenBooking}
-            className="w-full sm:w-auto px-9 py-4 bg-[#C6A66B] text-[#151412] text-xs font-sans uppercase tracking-ultra font-semibold hover:bg-[#F7F3EC] transition-all duration-500 shadow-luxury flex items-center justify-center gap-3 group"
-          >
-            <Calendar className="w-4 h-4 transition-transform group-hover:scale-110" />
-            <span>BOOK YOUR EXPERIENCE</span>
-          </button>
-
-          <a
-            href="#services"
-            onClick={handleScrollToServices}
-            className="w-full sm:w-auto px-9 py-4 border border-[#C6A66B]/50 hover:border-[#C6A66B] text-[#F7F3EC] hover:text-[#C6A66B] text-xs font-sans uppercase tracking-ultra font-medium transition-all duration-500 bg-[#151412]/40 backdrop-blur-sm flex items-center justify-center gap-3 group"
-          >
-            <Compass className="w-4 h-4 transition-transform group-hover:rotate-45" />
-            <span>EXPLORE TREATMENTS</span>
-          </a>
-        </div>
       </div>
 
-      {/* Animated Scroll Indicator */}
+      {/* Minimal Left-Bottom Scroll Indicator */}
       <div
         ref={scrollRef}
-        className="opacity-0 absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer z-10"
-        onClick={handleScrollToServices}
+        onClick={() => {
+          const nextSec = document.querySelector('section:nth-of-type(2)');
+          if (nextSec) nextSec.scrollIntoView({ behavior: 'smooth' });
+        }}
+        className="opacity-0 absolute bottom-6 left-6 sm:left-10 lg:left-16 xl:left-24 flex items-center gap-3 cursor-pointer z-10 group"
       >
-        <span className="text-[10px] uppercase tracking-[0.3em] text-[#C6A66B]/70 font-sans">
-          SCROLL
+        <span className="w-8 h-[1px] bg-[#C6A66B]/60 group-hover:w-12 transition-all duration-300"></span>
+        <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.35em] text-[#C6A66B]/80 font-sans group-hover:text-[#C6A66B] transition-colors">
+          SCROLL TO EXPLORE
         </span>
-        <div className="w-6 h-10 border border-[#C6A66B]/30 rounded-full flex justify-center p-1">
-          <div className="w-1 h-2 bg-[#C6A66B] rounded-full animate-bounce"></div>
-        </div>
       </div>
     </section>
   );

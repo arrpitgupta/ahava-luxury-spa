@@ -51,13 +51,17 @@ export default function BookingModal({ isOpen, onClose, selectedService }) {
         
         {/* Modal Header */}
         <div className="flex items-center justify-between p-6 sm:p-8 border-b border-[#C6A66B]/20 bg-[#151412]/80">
-          <div>
-            <span className="text-[10px] font-sans tracking-ultra text-[#C6A66B] uppercase block">
-              AHAVA LUXURY SPA
-            </span>
-            <h3 className="font-serif text-2xl sm:text-3xl text-[#F7F3EC] uppercase tracking-wide">
-              RESERVE YOUR EXPERIENCE
-            </h3>
+          <div className="flex items-center gap-4">
+            <img
+              src="/logo.png"
+              alt="Ahava Luxury Spa"
+              className="h-10 sm:h-12 w-auto object-contain"
+            />
+            <div>
+              <h3 className="font-serif text-xl sm:text-2xl text-[#F7F3EC] uppercase tracking-wide">
+                RESERVE YOUR EXPERIENCE
+              </h3>
+            </div>
           </div>
           <button
             onClick={onClose}

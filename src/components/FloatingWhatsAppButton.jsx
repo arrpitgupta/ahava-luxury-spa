@@ -1,15 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { getWhatsAppUrl } from '../utils/whatsapp';
-import { animatePulse } from '../animations/gsap';
 
 export default function FloatingWhatsAppButton() {
-  const buttonRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (buttonRef.current) {
-      animatePulse(buttonRef.current);
-    }
+    // Reveal after 1 second for a quiet, elegant entrance
+    const timer = setTimeout(() => setIsVisible(true), 1000);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleWhatsAppClick = () => {
@@ -18,21 +17,26 @@ export default function FloatingWhatsAppButton() {
   };
 
   return (
-    <div
-      ref={buttonRef}
-      className="fixed bottom-6 right-6 z-40 flex items-center group cursor-pointer"
-      onClick={handleWhatsAppClick}
-      aria-label="Chat with Ahava Luxury Spa on WhatsApp"
+    <aside
+      aria-label="Floating WhatsApp Desk"
+      className={`fixed bottom-6 right-6 z-40 transition-all duration-700 ease-out transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6 pointer-events-none'
+      }`}
     >
-      <div className="flex items-center gap-2.5 px-4 py-3 bg-[#25D366] text-[#151412] rounded-full shadow-luxury hover:bg-[#20ba5a] transition-all duration-300 border border-white/20">
-        <MessageCircle className="w-5 h-5 fill-[#151412] text-[#25D366]" />
-        <span className="hidden sm:inline-block font-sans text-xs uppercase tracking-widest font-semibold text-[#151412]">
-          Chat with us
-        </span>
-      </div>
+      <button
+        onClick={handleWhatsAppClick}
+        aria-label="Chat with Ahava Luxury Spa on WhatsApp"
+        className="group flex items-center gap-2.5 px-3.5 py-3 sm:px-4 sm:py-3 bg-[#1C1A17] border border-[#25D366]/60 text-[#F7F3EC] rounded-full shadow-luxury hover:bg-[#25D366] hover:text-[#151412] hover:border-[#25D366] transition-all duration-400 focus:outline-none"
+      >
+        <div className="relative flex items-center justify-center">
+          <MessageCircle className="w-5 h-5 text-[#25D366] group-hover:text-[#151412] transition-colors" />
+          <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-[#25D366]"></span>
+        </div>
 
-      {/* Subtle Glowing Pulse Ring */}
-      <span className="absolute -inset-1 rounded-full bg-[#25D366]/30 -z-10 animate-ping opacity-40"></span>
-    </div>
+        <span className="hidden md:inline-block font-sans text-[11px] uppercase tracking-widest font-semibold text-[#E8DED0] group-hover:text-[#151412] transition-colors pr-1">
+          CHAT WITH US
+        </span>
+      </button>
+    </aside>
   );
 }

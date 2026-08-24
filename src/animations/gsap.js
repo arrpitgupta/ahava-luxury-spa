@@ -17,8 +17,8 @@ export const animateHero = ({ imageRef, eyebrowRef, headingRef, descRef, buttons
   if (imageRef?.current) {
     tl.fromTo(
       imageRef.current,
-      { scale: 1.15, filter: 'brightness(0.7)' },
-      { scale: 1.0, filter: 'brightness(0.65)', duration: 2.2, ease: 'power2.out' },
+      { scale: 1.08 },
+      { scale: 1.0, duration: 2.8, ease: 'power2.out' },
       0
     );
   }
@@ -28,7 +28,7 @@ export const animateHero = ({ imageRef, eyebrowRef, headingRef, descRef, buttons
       eyebrowRef.current,
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 0.8 },
-      0.6
+      0.4
     );
   }
 
@@ -37,16 +37,16 @@ export const animateHero = ({ imageRef, eyebrowRef, headingRef, descRef, buttons
     if (lines.length > 0) {
       tl.fromTo(
         lines,
-        { opacity: 0, y: 35 },
-        { opacity: 1, y: 0, duration: 1.0, stagger: 0.2 },
-        0.8
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.9, stagger: 0.18 },
+        0.6
       );
     } else {
       tl.fromTo(
         headingRef.current,
-        { opacity: 0, y: 35 },
-        { opacity: 1, y: 0, duration: 1.0 },
-        0.8
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.9 },
+        0.6
       );
     }
   }
@@ -54,9 +54,9 @@ export const animateHero = ({ imageRef, eyebrowRef, headingRef, descRef, buttons
   if (descRef?.current) {
     tl.fromTo(
       descRef.current,
-      { opacity: 0, y: 25 },
+      { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 0.8 },
-      1.3
+      1.1
     );
   }
 
@@ -65,16 +65,16 @@ export const animateHero = ({ imageRef, eyebrowRef, headingRef, descRef, buttons
       buttonsRef.current,
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 0.8 },
-      1.5
+      1.3
     );
   }
 
   if (scrollRef?.current) {
     tl.fromTo(
       scrollRef.current,
-      { opacity: 0, y: 15 },
+      { opacity: 0, y: 12 },
       { opacity: 1, y: 0, duration: 0.8 },
-      1.7
+      1.5
     );
   }
 

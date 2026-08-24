@@ -16,15 +16,20 @@ export const getServiceWhatsAppUrl = (serviceName, duration, price) => {
   return getWhatsAppUrl(message);
 };
 
-export const getBookingFormWhatsAppUrl = ({ serviceName, name, phone, date, time, message: userMsg }) => {
-  let message = `Hello ${business.name},\nI would like to book/enquire about:\n\n`;
-  message += `Service: ${serviceName || 'Custom Treatment'}\n`;
-  if (name) message += `Name: ${name}\n`;
-  if (phone) message += `Phone: ${phone}\n`;
-  if (date) message += `Preferred Date: ${date}\n`;
-  if (time) message += `Preferred Time: ${time}\n`;
-  if (userMsg) message += `Message: ${userMsg}\n`;
-  message += `\nPlease confirm availability.\nThank you.`;
+export const getBookingFormWhatsAppUrl = ({ serviceName, duration, price, name, phone, email, date, time, message: userMsg, branch }) => {
+  let message = `✨ *NEW SPA RESERVATION ENQUIRY* ✨\n\n`;
+  message += `📍 *Branch:* ${branch || 'HSR Layout, Sector 1, Bengaluru'}\n`;
+  message += `💆‍♀️ *Treatment:* ${serviceName || 'Custom Therapy'}\n`;
+  if (duration) message += `⏱ *Duration:* ${duration}\n`;
+  if (price) message += `💰 *Price:* ${price}\n`;
+  message += `\n👤 *GUEST DETAILS*\n`;
+  if (name) message += `• Name: ${name}\n`;
+  if (phone) message += `• WhatsApp: ${phone}\n`;
+  if (email) message += `• Email: ${email}\n`;
+  if (date) message += `📅 *Date:* ${date}\n`;
+  if (time) message += `⏰ *Time:* ${time}\n`;
+  if (userMsg) message += `📝 *Notes:* ${userMsg}\n`;
+  message += `\nPlease confirm availability and details for my reservation. Thank you!`;
 
   return getWhatsAppUrl(message);
 };

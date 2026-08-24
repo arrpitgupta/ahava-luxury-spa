@@ -15,7 +15,7 @@ export const galleryImages = [
     category: "INTERIORS",
     categorySlug: "interiors",
     aspect: "aspect-[3/4]",
-    src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+    src: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787587473/WhatsApp_Image_2026-08-24_at_9.22.29_PM_1.jpg",
     alt: "Warm ambient lit luxury spa room with stone bathtub and soft towels"
   },
   {
@@ -24,7 +24,7 @@ export const galleryImages = [
     category: "RITUALS",
     categorySlug: "rituals",
     aspect: "aspect-[4/3]",
-    src: "https://images.unsplash.com/photo-1608248597263-0057e0582046?auto=format&fit=crop&w=1200&q=80",
+    src: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787587473/WhatsApp_Image_2026-08-24_at_9.22.29_PM_2.jpg",
     alt: "Glass bottles of organic aromatherapy oils surrounded by flower petals"
   },
   {
@@ -33,7 +33,8 @@ export const galleryImages = [
     category: "TREATMENTS",
     categorySlug: "treatments",
     aspect: "aspect-square",
-    src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80",
+    src: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787587472/WhatsApp_Image_2026-08-24_at_1.37.53_PM_1.jpg",
+
     alt: "Guest receiving a peaceful holistic back massage in dark warm therapy room"
   },
   {
@@ -42,7 +43,8 @@ export const galleryImages = [
     category: "AMBIENCE",
     categorySlug: "ambience",
     aspect: "aspect-[16/9]",
-    src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80",
+
+    src: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787587472/WhatsApp_Image_2026-08-24_at_9.19.17_PM_2.jpg",
     alt: "Tranquil indoor thermal pool with teak wood loungers and soft candlelight"
   },
   {
@@ -51,7 +53,7 @@ export const galleryImages = [
     category: "TREATMENTS",
     categorySlug: "treatments",
     aspect: "aspect-[3/4]",
-    src: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80",
+    src: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787587473/WhatsApp_Image_2026-08-24_at_9.22.29_PM.jpg",
     alt: "Deep hydrating facial treatment with gentle botanical application"
   },
   {
@@ -60,7 +62,7 @@ export const galleryImages = [
     category: "COUPLE EXPERIENCE",
     categorySlug: "couple",
     aspect: "aspect-[4/3]",
-    src: "https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=1200&q=80",
+    src: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787587472/WhatsApp_Image_2026-08-24_at_9.19.17_PM_1.jpg",
     alt: "Private side-by-side couple treatment suite with rose petals and champagne service"
   },
   {
@@ -69,7 +71,7 @@ export const galleryImages = [
     category: "DETAILS",
     categorySlug: "details",
     aspect: "aspect-square",
-    src: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80",
+    src: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787587473/WhatsApp_Image_2026-08-24_at_1.37.58_PM_1.jpg",
     alt: "Warm ambient candlelight glowing on natural basalt stone surfaces"
   },
   {
@@ -78,7 +80,7 @@ export const galleryImages = [
     category: "INTERIORS",
     categorySlug: "interiors",
     aspect: "aspect-[3/4]",
-    src: "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1200&q=80",
+    src: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787587472/WhatsApp_Image_2026-08-24_at_9.19.17_PM.jpg",
     alt: "Minimal luxury spa reception with limestone counter and warm architectural lighting"
   },
   {
@@ -90,13 +92,4 @@ export const galleryImages = [
     src: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80",
     alt: "Serene post-treatment relaxation lounge with steaming herbal infusions"
   },
-  {
-    id: 10,
-    title: "Jade Stone Facial Sculpting",
-    category: "DETAILS",
-    categorySlug: "details",
-    aspect: "aspect-square",
-    src: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&q=80",
-    alt: "Chilled jade stone facial contours and skin renewal detail"
-  }
 ];
