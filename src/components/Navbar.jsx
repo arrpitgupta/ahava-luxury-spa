@@ -217,13 +217,13 @@ export default function Navbar() {
             <span>BOOK APPOINTMENT</span>
           </Link>
 
-          <div className="grid grid-cols-2 gap-4 text-xs text-[#E8DED0]/70 font-sans pt-2">
+          <div className="grid grid-cols-2 gap-4 text-xs text-[#2C2621]/70 font-sans pt-2">
             <div className="flex items-center gap-2">
-              <Phone className="w-3.5 h-3.5 text-[#C6A66B]" />
+              <Phone className="w-3.5 h-3.5 text-[#2C2621]" />
               <span>{business.phone}</span>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin className="w-3.5 h-3.5 text-[#C6A66B]" />
+              <MapPin className="w-3.5 h-3.5 text-[#2C2621]" />
               <span>HSR Layout, Bengaluru</span>
             </div>
           </div>

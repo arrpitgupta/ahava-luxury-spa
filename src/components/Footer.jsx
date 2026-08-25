@@ -170,7 +170,7 @@ export default function Footer() {
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2 text-[#C6A66B] hover:text-[#F7F3EC] transition-colors uppercase text-[10px] tracking-ultra"
+            className="flex items-center gap-2 text-[#C6A66B] hover:text-[#F7F3EC] transition-colors uppercase text-[10px] tracking-ultra sm:mr-44 md:mr-52 cursor-pointer"
           >
             <span>BACK TO TOP</span>
             <ArrowUp className="w-3.5 h-3.5" />
