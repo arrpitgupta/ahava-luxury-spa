@@ -236,7 +236,7 @@ export const services = [
       { duration: "30 min", price: "₹1,500", numericPrice: 1500 }
     ],
     image: "/assets/services/steam-bath.jpg",
-    fallbackImage: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787575604/WhatsApp_Image_2026-08-24_at_1.37.55_PM.jpg",
+    fallbackImage: "https://res.cloudinary.com/e6ehhcen/image/upload/v1787631642/steam_bath.png",
     benefits: [
       "Flushes out skin impurities & opens pores",
       "Relieves sinus congestion & clears airways",
