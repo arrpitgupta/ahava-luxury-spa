@@ -16,6 +16,7 @@ export default function Footer() {
     { name: 'Gallery', path: '/gallery' },
     { name: 'Contact', path: '/contact' },
     { name: 'Booking', path: '/booking' },
+    { name: 'Privacy Policy', path: '/privacy-policy' },
   ];
 
   const handleWhatsAppClick = () => {
@@ -166,7 +167,16 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-[#A3998E] font-light">
-          <p>© 2026 {business.name}. All Rights Reserved.</p>
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-1">
+            <p>© 2026 {business.name}. All Rights Reserved.</p>
+            <span className="hidden sm:inline text-[#C6A66B]/40">•</span>
+            <Link
+              to="/privacy-policy"
+              className="text-[#A3998E] hover:text-[#C6A66B] transition-colors"
+            >
+              Privacy Policy
+            </Link>
+          </div>
 
           <button
             onClick={scrollToTop}

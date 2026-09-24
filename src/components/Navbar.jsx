@@ -81,6 +81,7 @@ export default function Navbar() {
     // { name: 'Booking', path: '/booking' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Contact', path: '/contact' },
+    { name: 'Privacy Policy', path: '/privacy-policy' },
   ];
 
   const handleWhatsAppClick = () => {
@@ -109,19 +110,19 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="Ahava Luxury Spa"
-              className="h-11 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="h-12 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center space-x-8" aria-label="Main Navigation">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8" aria-label="Main Navigation">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
               return (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text-xs uppercase tracking-widest transition-colors relative py-1 ${isActive ? 'text-[#C6A66B] font-semibold' : 'text-[#2C2621]/85 hover:text-[#C6A66B]'
+                  className={`text-xs uppercase tracking-widest transition-colors relative py-1 whitespace-nowrap ${isActive ? 'text-[#C6A66B] font-semibold' : 'text-[#2C2621]/85 hover:text-[#C6A66B]'
                     } after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:bg-[#C6A66B] ${isActive ? 'after:w-full' : 'after:w-0 hover:after:w-full'
                     } after:transition-all after:duration-300`}
                 >
@@ -171,7 +172,7 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="Ahava Luxury Spa"
-              className="h-10 sm:h-12 w-auto object-contain"
+              className="h-12 sm:h-14 w-auto object-contain"
             />
           </Link>
           <button
